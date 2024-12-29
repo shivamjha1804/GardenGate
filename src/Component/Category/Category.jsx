@@ -1,15 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules"; // Import modules explicitly
-import "swiper/css"; // Swiper styles
-import "swiper/css/pagination"; // Optional styles
-import "swiper/css/navigation"; // Optional styles
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import CategoryCard from "../CategoryCard/CategoryCard";
 import gandeningImage from "../../assets/Categories/gardening.png";
 import plantImage from "../../assets/Categories/plant.png";
 import seedImage from "../../assets/Categories/seeds.png";
 import gardenImage from "../../assets/Categories/gardenPart.png";
-import "./Category.css"; // Custom styles
+import "./Category.css";
 
 const Category = () => {
   const categories = [
@@ -20,32 +19,25 @@ const Category = () => {
     { id: 5, name: "Garden", image: gardenImage },
     { id: 6, name: "Garden", image: gardenImage },
     { id: 7, name: "Garden", image: gardenImage },
+    { id: 8, name: "Garden", image: gardenImage },
+    { id: 9, name: "Garden", image: gardenImage },
+    { id: 10, name: "Garden", image: gardenImage },
   ];
 
   return (
-    <div className="my-5">
+    <div className="my-5 category-container">
       <Swiper
         modules={[Navigation]}
         spaceBetween={10}
         slidesPerView={4}
-        // navigation={{
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // }}
-        // pagination={{ clickable: true }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         breakpoints={{
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-          },
+          640: { slidesPerView: 3, spaceBetween: 10 },
+          768: { slidesPerView: 4, spaceBetween: 15 },
+          1024: { slidesPerView: 6, spaceBetween: 20 },
         }}
         className="category-swiper"
       >
@@ -55,9 +47,12 @@ const Category = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* Custom Navigation Buttons */}
-      <div className="swiper-button-pre custom-nav">❮</div>
-      <div className="swiper-button-nex custom-nav">❯</div>
+      <div className="swiper-button-prev custom-nav">
+        <h1 className="image-arrow">❮</h1>
+      </div>
+      <div className="swiper-button-next custom-nav">
+        <h1 className="image-arrow">❯</h1>
+      </div>
     </div>
   );
 };
