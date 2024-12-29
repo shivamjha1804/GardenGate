@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules"; // Import modules explicitly
 import "swiper/css"; // Swiper styles
 import "swiper/css/pagination"; // Optional styles
 import "swiper/css/navigation"; // Optional styles
@@ -8,6 +9,7 @@ import gandeningImage from "../../assets/Categories/gardening.png";
 import plantImage from "../../assets/Categories/plant.png";
 import seedImage from "../../assets/Categories/seeds.png";
 import gardenImage from "../../assets/Categories/gardenPart.png";
+import "./Category.css"; // Custom styles
 
 const Category = () => {
   const categories = [
@@ -23,22 +25,39 @@ const Category = () => {
   return (
     <div className="my-5">
       <Swiper
-        spaceBetween={1}
-        slidesPerView={5}
-        navigation
-        pagination={{ clickable: true }}
+        modules={[Navigation]}
+        spaceBetween={10}
+        slidesPerView={4}
+        // navigation={{
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // }}
+        // pagination={{ clickable: true }}
         breakpoints={{
-          640: { slidesPerView: 3 },
-          768: { slidesPerView: 5 },
-          1024: { slidesPerView: 5 },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+          },
         }}
+        className="category-swiper"
       >
-        {categories.map((item, index) => (
-          <SwiperSlide key={index}>
+        {categories.map((item) => (
+          <SwiperSlide key={item.id}>
             <CategoryCard item={item} />
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* Custom Navigation Buttons */}
+      <div className="swiper-button-pre custom-nav">❮</div>
+      <div className="swiper-button-nex custom-nav">❯</div>
     </div>
   );
 };

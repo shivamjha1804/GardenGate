@@ -1,0 +1,74 @@
+/* Hide default Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+/* Custom Navigation Buttons */
+.custom-nav {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  font-size: 20px; /* Bigger icons */
+  border-radius: 50%; /* Circular buttons */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 127%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-pre.custom-nav {
+  left: 0px;
+}
+
+.swiper-button-nex.custom-nav {
+  right: 0px;
+}
+
+.custom-nav:hover {
+  background-color: #45a049; /* Darker green on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .custom-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .swiper-button-pre.custom-nav {
+    left: -10px;
+  }
+  .swiper-button-nex.custom-nav {
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-nav {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .swiper-button-pre .custom-nav {
+    /* left: -5px; */
+  }
+  .swiper-button-nex .custom-nav {
+    /* right: -5px;  */
+  }
+}
