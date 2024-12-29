@@ -29,7 +29,10 @@ const NavBar = () => {
       {/* Hamburger Menu */}
       <div className="md:hidden">
         <button
-          onClick={() => setMenuOpen(!isMenuOpen)}
+          onClick={() => {
+            setSearchOpen(false);
+            setMenuOpen(!isMenuOpen);
+          }}
           className="text-gray-600 focus:outline-none"
           aria-label="Toggle menu"
         >
@@ -58,9 +61,12 @@ const NavBar = () => {
       />
 
       {/* Search Icon */}
-      <div className="md:hidden bg-red-600">
+      <div className="md:hidden bg-red-600 items-center p-1.5 rounded-[3px] justify-center">
         <button
-          onClick={() => setSearchOpen(!isSearchOpen)}
+          onClick={() => {
+            setMenuOpen(false)
+            setSearchOpen(!isSearchOpen)
+          }}
           className="text-red-600 focus:outline-none"
           aria-label="Toggle search"
         >
@@ -104,7 +110,7 @@ const NavBar = () => {
 
       {/* Mobile Search Bar */}
       {isSearchOpen && (
-        <div className="absolute top-full left-0 right-0 px-4 bg-white shadow-lg z-10">
+        <div className="absolute top-full left-0 right-0 px-4 py-2 bg-white shadow-lg z-10">
           <div className="flex items-center border border-gray-300 rounded-md shadow-sm">
             <input
               placeholder="What are you looking for?"

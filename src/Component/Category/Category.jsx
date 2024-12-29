@@ -24,13 +24,13 @@ const Category = () => {
     <div className="my-5">
       <Swiper
         spaceBetween={1}
-        slidesPerView={8}
+        slidesPerView={5}
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
           640: { slidesPerView: 3 },
           768: { slidesPerView: 5 },
-          1024: { slidesPerView: 8 },
+          1024: { slidesPerView: 5 },
         }}
       >
         {categories.map((item, index) => (

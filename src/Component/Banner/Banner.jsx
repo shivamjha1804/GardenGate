@@ -4,7 +4,7 @@ import bannerImage from "../../assets/mainBanner/image.png";
 const Banner = () => {
   return (
     <div
-      className="relative h-[225px] sm:h-[450px] md:h-[600px] lg:h-[700px] w-full bg-cover bg-center"
+      className="relative h-[225px] sm:h-[450px] md:h-[600px] lg:h-[700px] z-0 w-full bg-cover bg-center"
       style={{ backgroundImage: `url(${bannerImage})` }}
     >
       {/* Overlay */}
