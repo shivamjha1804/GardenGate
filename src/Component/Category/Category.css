@@ -64,9 +64,10 @@
     width: 25px;
     height: 25px;
     font-size: 14px;
+    top: 43%;
   }
   .swiper-button-pre .custom-nav {
-    /* left: -5px; */
+    /* left: 15px; */
   }
   .swiper-button-nex .custom-nav {
     /* right: -5px;  */
