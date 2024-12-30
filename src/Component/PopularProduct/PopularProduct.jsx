@@ -56,9 +56,7 @@ const PopularProduct = () => {
       <div className="mb-6 flex flex-col md:flex-row justify-center items-center md:items-start md:mr-7 w-full md:w-auto">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex mb-2">
-            <h1 className="text-4xl mr-2 font-normal text-gray-800">
-              Most
-            </h1>
+            <h1 className="text-4xl mr-2 font-normal text-gray-800">Most</h1>
             <h1 className="text-4xl font-bold text-gray-800">Popular</h1>
           </div>
           <h3 className="text-base text-gray-600">
@@ -88,7 +86,7 @@ const PopularProduct = () => {
         >
           {popularProduct.map((item) => (
             <SwiperSlide key={item.id}>
-              <PopularProductCard item={item} />
+              <PopularProductCard key={item.id} item={item} />
             </SwiperSlide>
           ))}
         </Swiper>

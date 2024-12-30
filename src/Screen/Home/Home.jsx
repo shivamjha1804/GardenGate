@@ -14,7 +14,8 @@ const Home = () => {
       <Banner />
       <Category />
       <PopularProduct />
-      <Deals />
+      <Deals name={"Deal"} view={"View All"} />
+      <Deals name={"Recommended For You"} />
     </div>
   );
 };
