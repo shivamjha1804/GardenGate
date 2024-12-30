@@ -1,76 +1,104 @@
 import React from "react";
-import CategoryCard from "../CategoryCard/CategoryCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import gandeningImage from "../../assets/Categories/gardening.png";
-import plantImage from "../../assets/Categories/plant.png";
-import seedImage from "../../assets/Categories/seeds.png";
-import gardenImage from "../../assets/Categories/gardenPart.png";
-import "../Category/Category.css";
+import image1 from "../../assets/products/image.png";
+import image2 from "../../assets/products/image2.png";
+import image3 from "../../assets/products/image3.png";
+import "./PopularProduct.css";
+import PopularProductCard from "../PopularProductCard/PopularProductCard";
 
 const PopularProduct = () => {
-  const categories = [
-    { id: 1, name: "Gardening", image: gandeningImage },
-    { id: 2, name: "Plant", image: plantImage },
-    { id: 3, name: "Seeds", image: seedImage },
-    { id: 4, name: "Garden", image: gardenImage },
-    { id: 5, name: "Garden", image: gardenImage },
-    { id: 6, name: "Garden", image: gardenImage },
-    { id: 7, name: "Garden", image: gardenImage },
-    { id: 8, name: "Garden", image: gardenImage },
-    { id: 9, name: "Garden", image: gardenImage },
-    { id: 10, name: "Garden", image: gardenImage },
+  const popularProduct = [
+    {
+      id: 1,
+      name: "Croton Petra",
+      image: image1,
+      crossedPrice: 300,
+      price: 350,
+    },
+    {
+      id: 2,
+      name: "PlaCroton Petrant",
+      image: image2,
+      crossedPrice: 340,
+      price: 320,
+    },
+    {
+      id: 3,
+      name: "Seeds Croton ",
+      image: image3,
+      crossedPrice: 400,
+      price: 360,
+    },
+    {
+      id: 4,
+      name: "Garden Croton ",
+      image: image1,
+      crossedPrice: 200,
+      price: 250,
+    },
+    {
+      id: 5,
+      name: "Gardening Croton",
+      image: image2,
+      crossedPrice: 160,
+      price: 100,
+    },
+    { id: 6, name: "Croton Pet", image: image3, crossedPrice: 500, price: 450 },
+    { id: 7, name: "Croton Pe", image: image1, crossedPrice: 600, price: 550 },
+    { id: 8, name: "Croton P", image: image2, crossedPrice: 700, price: 650 },
   ];
 
   return (
-    <div className="flex flex-row w-full p-6">
-      <div className=" mb-6 justify-center items-center mr-7">
-        <div className="flex">
-          <h1 className="text-left text-4xl mr-2 font-normal text-gray-800">
-            Most
-          </h1>
-          <h1 className="text-left text-4xl font-bold text-gray-800">
-            Popular
-          </h1>
+    <div className="flex flex-wrap sm:flex-col flex-row p-4 w-full">
+      <div className="mb-6 flex flex-col md:flex-row justify-center items-center md:items-start md:mr-7 w-full md:w-auto">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex mb-2">
+            <h1 className="text-4xl mr-2 sm:text-2xl font-normal text-gray-800">
+              Most
+            </h1>
+            <h1 className="text-4xl font-bold text-gray-800">Popular</h1>
+          </div>
+          <h3 className="text-base text-gray-600">
+            Meet our most lovable plants
+          </h3>
+          <button className="mt-4 px-6 py-2 text-black border-black border-2">
+            SHOP BEST SELLERS
+          </button>
         </div>
-        <h3 className="text-left text-base text-gray-600">
-          Meet our most lovable plants
-        </h3>
-        <button className="mt-4   px-6 py-2 text-black border-black border-2">
-          <h1 className="text-base">SHOP BEST SELLERS</h1>
-        </button>
       </div>
 
-      <div className="relative w-[80%]">
+      <div className="relative w-full md:w-[80%]">
         <Swiper
           modules={[Navigation]}
           spaceBetween={10}
-          slidesPerView={4}
+          slidesPerView={2}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
           breakpoints={{
-            640: { slidesPerView: 3, spaceBetween: 10 },
-            768: { slidesPerView: 4, spaceBetween: 15 },
-            1024: { slidesPerView: 6, spaceBetween: 20 },
+            480: { slidesPerView: 2, spaceBetween: 10 },
+            768: { slidesPerView: 3, spaceBetween: 15 },
+            1024: { slidesPerView: 4, spaceBetween: 20 },
           }}
           className="category-swiper"
         >
-          {categories.map((item) => (
+          {popularProduct.map((item) => (
             <SwiperSlide key={item.id}>
-              <CategoryCard item={item} />
+              <PopularProductCard item={item} />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="swiper-button-prev custom-nav">
-          <h1 className="image-arrow">❮</h1>
+        {/* Custom Navigation Buttons */}
+        <div className="swiper-button-prev custom-na">
+          <h1 className="image-arro">❮</h1>
         </div>
-        <div className="swiper-button-next custom-nav">
-          <h1 className="image-arrow">❯</h1>
+        <div className="swiper-button-next custom-na">
+          <h1 className="image-arro">❯</h1>
         </div>
       </div>
     </div>

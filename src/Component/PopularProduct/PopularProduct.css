@@ -1,23 +1,16 @@
 /* Container Adjustments */
-.category-container {
+.category-swiper {
   position: relative;
 }
 
-/* Hide Default Swiper Buttons */
-.swiper-button-prev,
-.swiper-button-next {
-  /* display: none !important; */
-}
-
 /* Custom Navigation Buttons */
-.custom-nav {
+.custom-na {
   background-color: #4caf50;
   color: transparent;
   font-size: 20px;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  /* padding: 25px; */
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,47 +22,38 @@
   transition: all 0.3s ease;
 }
 
-.image-arrow {
+.swiper-button-prev.custom-na {
+  left: -20px;
+}
+
+.swiper-button-next.custom-na {
+  right: -20px;
+}
+
+.image-arro {
+  font-size: 18px;
   color: #fff;
   position: absolute;
   right: 25;
   padding: 3px;
 }
 
-/*      \ */
-
-.swiper-button-prev.custom-nav {
-  left: 23px;
-}
-
-.swiper-button-next.custom-nav {
-  right: 23px;
-}
-
-.custom-nav:hover {
+.custom-na:hover {
   background-color: #45a049;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .custom-nav {
+@media (max-width: 768px) {
+  .custom-na {
     width: 35px;
     height: 35px;
     font-size: 18px;
   }
 }
 
-@media (max-width: 768px) {
-  .custom-nav {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-}
-
 @media (max-width: 480px) {
-  .custom-nav {
+  .custom-na {
     display: none;
   }
 }
