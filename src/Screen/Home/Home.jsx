@@ -4,6 +4,7 @@ import UpperNavBar from "../../Component/Nav/UpperNavBar";
 import Banner from "../../Component/Banner/Banner";
 import Category from "../../Component/Category/Category";
 import PopularProduct from "../../Component/PopularProduct/PopularProduct";
+import Deals from "../../Component/Deals/Deals";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner />
       <Category />
       <PopularProduct />
+      <Deals />
     </div>
   );
 };

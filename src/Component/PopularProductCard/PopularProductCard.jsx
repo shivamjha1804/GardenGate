@@ -6,7 +6,8 @@ const PopularProductCard = ({ item }) => {
       <img
         src={item.image}
         alt={item.name}
-        className="w-full h-52 sm:h-40 object-cover "
+        className="w-full h-56 object-cover"
+
       />
       <div className="">
         <h1 className="text-lg font-bold text-gray-800">{item.name}</h1>

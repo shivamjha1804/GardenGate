@@ -52,11 +52,11 @@ const PopularProduct = () => {
   ];
 
   return (
-    <div className="flex flex-wrap sm:flex-col flex-row p-4 w-full">
+    <div className="flex flex-wrap flex-col sm:flex-row p-4 w-full">
       <div className="mb-6 flex flex-col md:flex-row justify-center items-center md:items-start md:mr-7 w-full md:w-auto">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex mb-2">
-            <h1 className="text-4xl mr-2 sm:text-2xl font-normal text-gray-800">
+            <h1 className="text-4xl mr-2 font-normal text-gray-800">
               Most
             </h1>
             <h1 className="text-4xl font-bold text-gray-800">Popular</h1>
