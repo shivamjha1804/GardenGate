@@ -9,6 +9,10 @@ import PanIndia from "../../Component/PanIndia/PanIndia";
 import AboutUs from "../../Component/AboutUs/AboutUs";
 import YoutubeVideo from "../../Component/YoutubeVideo/YoutubeVideo";
 import ShopNow from "../../Component/ShopNow/ShopNow";
+import Strip from "../../Component/Strip/Strip";
+import Footer from "../../Component/Footer/Footer";
+import FooterPayment from "../../Component/FooterPayment/FooterPayment";
+import CopyRight from "../../Component/CopyRight/CopyRight";
 
 const Home = () => {
   return (
@@ -22,8 +26,12 @@ const Home = () => {
       <Deals name={"Recommended For You"} />
       <PanIndia />
       <AboutUs />
-      <YoutubeVideo/>
-      <ShopNow/>
+      <YoutubeVideo />
+      <ShopNow />
+      <Strip />
+      <Footer />
+      <FooterPayment/>
+      <CopyRight/>
     </div>
   );
 };

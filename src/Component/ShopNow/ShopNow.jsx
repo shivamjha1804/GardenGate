@@ -19,7 +19,7 @@ const ShopNow = () => {
           with <span className="text-white-400 font-bold">60% off</span> on all
           gardening accessories
         </p>
-        <button className=" hover:bg-gray-50 text-white border-white border-2  font-semibold px-6 py-2 sm:px-8 sm:py-3  text-sm sm:text-base">
+        <button className=" hover:bg-gray-50 hover:text-black text-white border-white border-2  font-semibold px-6 py-2 sm:px-8 sm:py-3  text-sm sm:text-base">
           Shop Now
         </button>
       </div>
