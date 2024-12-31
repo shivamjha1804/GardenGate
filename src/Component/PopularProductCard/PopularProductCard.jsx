@@ -1,13 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PopularProductCard = ({ item }) => {
+  const navigate = useNavigate();
   return (
-    <div className="max-w-xs mx-auto cursor-pointer bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 mx-1">
+    <div
+      onClick={() => navigate("/GardenGate/product")}
+      className="max-w-xs mx-auto cursor-pointer bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 mx-1"
+    >
       <img
         src={item.image}
         alt={item.name}
         className="w-full h-64 object-cover"
-
       />
       <div className="">
         <h1 className="text-lg font-bold text-gray-800">{item.name}</h1>

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import logo from "../../assets/UpperNavBar/Planeteria.png";
 import arrowDown from "../../assets/NavBar/Expand Arrow.png";
 import searchIcon from "../../assets/NavBar/Search.png";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
 
   const menuItems = ["Gardening", "Plants", "Seeds", "Accessories"];
+  const navigate = useNavigate();
 
   return (
     <nav className="navbar flex items-center justify-between px-4 py-3 bg-white shadow-md relative">
@@ -57,6 +59,7 @@ const NavBar = () => {
       <img
         className="h-8 md:h-10 mx-auto cursor-pointer"
         src={logo}
+        onClick={() => navigate("/GardenGate/")}
         alt="Planeteria logo"
       />
 
@@ -64,8 +67,8 @@ const NavBar = () => {
       <div className="md:hidden bg-red-600 items-center p-1.5 rounded-[3px] justify-center">
         <button
           onClick={() => {
-            setMenuOpen(false)
-            setSearchOpen(!isSearchOpen)
+            setMenuOpen(false);
+            setSearchOpen(!isSearchOpen);
           }}
           className="text-red-600 focus:outline-none"
           aria-label="Toggle search"

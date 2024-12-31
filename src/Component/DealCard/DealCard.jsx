@@ -1,9 +1,14 @@
 import React from "react";
 import ReaxtStar from "react-rating-stars-component";
+import { useNavigate } from "react-router-dom";
 
 const DealCard = ({ item }) => {
+  const navigate = useNavigate();
   return (
-    <div className="bg-gray-50 m-5 cursor-pointer rounded-[12px]">
+    <div
+      onClick={() => navigate("/GardenGate/product")}
+      className="bg-gray-50 m-5 cursor-pointer rounded-[12px]"
+    >
       <img
         src={item.image}
         alt={item.name}

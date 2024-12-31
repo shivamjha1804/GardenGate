@@ -20,7 +20,12 @@ const Banner = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam.
         </h3>
-        <button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 sm:px-8 sm:py-3 rounded-md text-sm sm:text-base">
+        <button
+          onClick={() => {
+            window.open("https://wa.me/9123760995?text=Hello", "_blank");
+          }}
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 sm:px-8 sm:py-3 rounded-md text-sm sm:text-base"
+        >
           Shop Now
         </button>
       </div>
