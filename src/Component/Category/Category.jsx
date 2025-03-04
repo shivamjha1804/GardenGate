@@ -31,8 +31,8 @@ const Category = () => {
         spaceBetween={10}
         slidesPerView={4}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".category-next",
+          prevEl: ".category-prev",
         }}
         breakpoints={{
           640: { slidesPerView: 3, spaceBetween: 10 },
@@ -47,10 +47,10 @@ const Category = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-prev custom-nav">
+      <div className="category-prev custom-nav">
         <h1 className="image-arrow">❮</h1>
       </div>
-      <div className="swiper-button-next custom-nav">
+      <div className="category-next custom-nav">
         <h1 className="image-arrow">❯</h1>
       </div>
     </div>
