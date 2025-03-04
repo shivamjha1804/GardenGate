@@ -32,7 +32,7 @@ const Product = () => {
       </div>
 
       {/* Product Details Section */}
-      <div className="lg:w-1/2 space-y-6">
+      <div id="product-details" className="lg:w-1/2 space-y-6">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal text-gray-800">
           Marble Queen Pothos
         </h1>
