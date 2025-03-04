@@ -1,12 +1,7 @@
 /* Container Adjustments */
 .category-container {
   position: relative;
-}
-
-/* Hide Default Swiper Buttons */
-.swiper-button-prev,
-.swiper-button-next {
-  /* display: none !important; */
+  padding: 0 40px;
 }
 
 /* Custom Navigation Buttons */
@@ -17,7 +12,6 @@
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  /* padding: 25px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,24 +25,28 @@
 
 .image-arrow {
   color: #fff;
-  position: absolute;
-  right: 25;
+  font-size: 18px;
   padding: 3px;
 }
 
-/*      \ */
-
-.swiper-button-prev.custom-nav {
-  left: 23px;
+/* Category specific navigation buttons */
+.category-prev {
+  left: 5px;
 }
 
-.swiper-button-next.custom-nav {
-  right: 23px;
+.category-next {
+  right: 5px;
 }
 
 .custom-nav:hover {
   background-color: #45a049;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide default swiper navigation arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
 
 /* Responsive Adjustments */
@@ -71,5 +69,8 @@
 @media (max-width: 480px) {
   .custom-nav {
     display: none;
+  }
+  .category-container {
+    padding: 0 10px;
   }
 }

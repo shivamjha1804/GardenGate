@@ -68,21 +68,19 @@ const PopularProduct = () => {
         </div>
       </div>
 
-      <div className="relative w-full md:w-[80%]">
+      <div className="relative w-full md:w-4/5 popular-container">
         <Swiper
           modules={[Navigation]}
-          spaceBetween={10}
-          slidesPerView={2}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            prevEl: ".popular-prev",
+            nextEl: ".popular-next",
           }}
           breakpoints={{
             480: { slidesPerView: 2, spaceBetween: 10 },
             768: { slidesPerView: 3, spaceBetween: 15 },
             1024: { slidesPerView: 4, spaceBetween: 20 },
           }}
-          className="category-swiper"
+          className="popular-swiper"
         >
           {popularProduct.map((item) => (
             <SwiperSlide key={item.id}>
@@ -92,11 +90,11 @@ const PopularProduct = () => {
         </Swiper>
 
         {/* Custom Navigation Buttons */}
-        <div className="swiper-button-prev custom-na">
-          <h1 className="image-arro">❮</h1>
+        <div className="popular-prev custom-nav-popular">
+          <span className="popular-arrow">❮</span>
         </div>
-        <div className="swiper-button-next custom-na">
-          <h1 className="image-arro">❯</h1>
+        <div className="popular-next custom-nav-popular">
+          <span className="popular-arrow">❯</span>
         </div>
       </div>
     </div>
